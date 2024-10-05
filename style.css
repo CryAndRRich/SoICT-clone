@@ -209,7 +209,7 @@ header {
     display: flex;
     position: relative;
     overflow: hidden;
-    background-image: url('bg-news.jpg');
+    background-image: url('img/bg-news.jpg');
     background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: darken;
 }
@@ -334,7 +334,7 @@ header {
 }
 
 .collabing {
-    background-image: url('bg-collab.jpg');
+    background-image: url('img/bg-collab.jpg');
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: darken;
 }
@@ -534,7 +534,7 @@ header {
 }
 
 footer {
-    background-image: url('bg-img-footer.jpeg');
+    background-image: url('img/bg-img-footer.jpeg');
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.4);
