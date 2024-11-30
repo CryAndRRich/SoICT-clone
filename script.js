@@ -104,10 +104,210 @@ function barContent() {
     });
 }
 
+function newsContent() {
+    const newsContents = [
+        {
+            img: "img/slide-img1.jpg", 
+            date: "19/06", 
+            content: "Lễ trao chứng nhận Học bổng Khuyến khích học tập kỳ 2023.2", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/le-trao-chung-nhan-hoc-bong-khuyen-khich-hoc-tap-ky-2023-2.html"
+        },
+        {
+            img: "img/slide-img2.jpg", 
+            date: "19/06", 
+            content: "Seminar tháng 6/2024 Trường CNTT&TT", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/seminar-thang-6-2024-truong-cntttt.html"
+        },
+        {
+            img: "img/slide-img3.jpg", 
+            date: "15/07", 
+            content: "Graduation Day 2024", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/graduation-day-2024.html"
+        },
+        {
+            img: "img/slide-img4.jpg", 
+            date: "24/07", 
+            content: "Seminar tháng 7/2024 Trường CNTT&TT", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/seminar-thang-7-2024-truong-cntttt.html"
+        },
+        {
+            img: "img/slide-img5.jpg", 
+            date: "26/07", 
+            content: "Tư vấn & Giải đáp Tuyển Sinh", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/tu-van-giai-dap-tuyen-sinh.html"
+        },
+        {
+            img: "img/slide-img6.jpg", 
+            date: "19/08", 
+            content: "Trường hè 2024 về Trí tuệ Nhân tạo tạo sinh", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/truong-he-2024-ve-tri-tue-nhan-tao-tao-sinh.html"
+        },
+        {
+            img: "img/slide-img7.jpg", 
+            date: "19/08", 
+            content: "2024 Precision Medicine Contest - CryAndRRich", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/truong-he-ve-y-hoc-chinh-xac-2024-precision-medicine-division-global-project.html"
+        },
+        {
+            img: "img/slide-img8.jpg", 
+            date: "19/08", 
+            content: "Seminar tháng 8/2024 Trường CNTT&TT", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/seminar-thang-8-2024-truong-cntttt.html"
+        },
+        {
+            img: "img/slide-img9.jpg", 
+            date: "23/09", 
+            content: "Seminar tháng 9/2024 Trường CNTT&TT", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/seminar-thang-9-2024-truong-cntttt.html"
+        },
+        {
+            img: "img/slide-img10.jpg", 
+            date: "25/09", 
+            content: "Trao chứng chỉ TA cho sinh viên hỗ trợ giảng dạy kỳ 2 năm học 2023-2024", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/trao-chung-chi-ta-cho-sinh-vien-ho-tro-giang-day-ky-2-nam-hoc-2023-2024.html"
+        },
+        {
+            img: "img/slide-img11.jpg", 
+            date: "29/09", 
+            content: "Cuộc thi Olympic Tin học BKHN 2024", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/cuoc-thi-olympic-tin-hoc-bkhn-2024.html"
+        },
+        {
+            img: "img/slide-img12.jpg", 
+            date: "13/12", 
+            content: "Hội thảo quốc tế về Công nghệ thông tin và truyền thông SOICT", 
+            time: "Thời gian: 3:30PM - DD/MM/YY<br>Địa điểm: Hội trường C2 - Online Zoom",
+            link: "https://soict.hust.edu.vn/hoi-thao-quoc-te-ve-cong-nghe-thong-tin-va-truyen-thong-soict-2024.html"
+        }
+    ];
+
+    const container = document.getElementById('slides3');
+
+    newsContents.forEach(contents => {
+        const section = document.createElement('section');
+        section.classList.add('slide-blocks3');
+
+        const img = document.createElement('img');
+        img.classList.add('slide-item3');
+        img.src = contents.img;
+
+        const dateP = document.createElement('p');
+        dateP.classList.add('date-text');
+        dateP.textContent = contents.date;
+
+        const contentP = document.createElement('p');
+        contentP.classList.add('content-text');
+        contentP.textContent = contents.content;
+
+        const timeP = document.createElement('p');
+        timeP.classList.add('time-text');
+        timeP.textContent = contents.time;
+
+        const link = document.createElement('a');
+        link.href = contents.link;
+        link.appendChild(img);
+
+        section.appendChild(link);
+        section.appendChild(dateP);
+        section.appendChild(contentP);
+        section.appendChild(timeP);
+
+        container.appendChild(section);
+    });
+}
+
+function studentContent() {
+    const studentContents = [
+        {
+            img: "img/exstudent-img1.jpg", 
+            content: "Nguyễn Tử Quảng - “Make in Vietnam”: từ BKAV đến BPhone…", 
+            quote: "CEO Nguyễn Tử Quảng: ‘Nếu thay đổi định kiến, Việt Nam sẽ là cường quốc công nghệ'",
+            link: "https://soict.hust.edu.vn/nguyen-tu-quang.html"
+        },
+        {
+            img: "img/exstudent-img2.jpg", 
+            content: "Vương Quang Khải - người đứng sau Zalo và 100 triệu người dùng", 
+            quote: "Anh Vương Quang Khải, Cựu sinh viên K41, và hiện là Phó Tổng Giám đốc Tập đoàn VNG",
+            link: "https://soict.hust.edu.vn/vuong-quang-khai.html"
+        },
+        {
+            img: "img/exstudent-img3.jpg", 
+            content: "Hoàng Việt Anh - Chỉ có một tình yêu duy nhất", 
+            quote: "Tổng giám đốc FPT Software Hoàng Việt Anh đã gắn bó với FPT Software hơn 20 năm",
+            link: "https://soict.hust.edu.vn/hoang-viet-anh-chi-co-mot-tinh-yeu-duy-nhat.html"
+        },
+        {
+            img: "img/exstudent-img4.jpg", 
+            content: "Lữ Thành Long - Thủ lĩnh công nghệ", 
+            quote: "Cựu sinh viên K34, Chủ tịch HĐQT Công ty Cổ phần MISA",
+            link: "https://soict.hust.edu.vn/lu-thanh-long-thu-linh-cong-nghe.html"
+        },
+        {
+            img: "img/exstudent-img5.jpg", 
+            content: "Nguyễn Hà Đông - Cha đẻ Flappy Bird “náo loạn” Thế giới", 
+            quote: "“Flappy Guy” cho rằng mình phải đánh đổi một số thứ để đạt được thành công",
+            link: "https://soict.hust.edu.vn/nguyen-ha-dong.html"
+        },
+        {
+            img: "img/exstudent-img6.jpg", 
+            content: "Hùng Trần - Tấm gương khởi nghiệp người Việt tại Silicon Valley", 
+            quote: "Cựu nghiên cứu sinh Quỹ Giáo dục Việt Nam (VEF) ngành Khoa học Máy tính, Đại học Iowa (Mỹ)",
+            link: "https://soict.hust.edu.vn/tran-viet-hung.html"
+        }
+    ];
+
+    const container = document.getElementById('slides4');
+
+    studentContents.forEach(contents => {
+        const section = document.createElement('section');
+        section.classList.add('slide-blocks4');
+
+        const img = document.createElement('img');
+        img.classList.add('slide-item4');
+        img.src = contents.img;
+
+        const exStudent = document.createElement('p');
+        exStudent.id = 'ex';
+        exStudent.textContent = 'Cựu Sinh viên';
+
+        const contentP = document.createElement('p');
+        contentP.classList.add('content-text');
+        contentP.textContent = contents.content;
+
+        const quoteP = document.createElement('p');
+        quoteP.classList.add('quote-text');
+        quoteP.textContent = contents.quote;
+
+        const link = document.createElement('a');
+        link.href = contents.link;
+        link.appendChild(img);
+
+        section.appendChild(link);
+        section.appendChild(exStudent);
+        section.appendChild(contentP);
+        section.appendChild(quoteP);
+
+        container.appendChild(section);
+    });
+
+}
+
 function slideImage(imagePerView, move) {
     const slides = document.querySelector('.slides' + imagePerView);
-    const slide = document.querySelectorAll('#slide' + imagePerView);
+    const slide = document.querySelectorAll('.slide-item' + imagePerView);
     let currentIndex = 0;
+    console.log(slides);
 
     document.getElementById('next'+ imagePerView).addEventListener('click', () => {
         if (currentIndex < slide.length - imagePerView) {
@@ -127,39 +327,6 @@ function slideImage(imagePerView, move) {
             currentIndex = slide.length - imagePerView;
         }
         slides.style.transform = `translateX(-${currentIndex * move}vw)`;
-    });
-}
-
-function addLinkImage(index) {
-    const links = [
-        ["https://soict.hust.edu.vn/le-trao-chung-nhan-hoc-bong-khuyen-khich-hoc-tap-ky-2023-2.html",
-        "https://soict.hust.edu.vn/seminar-thang-6-2024-truong-cntttt.html",
-        "https://soict.hust.edu.vn/graduation-day-2024.html",
-        "https://soict.hust.edu.vn/seminar-thang-7-2024-truong-cntttt.html",
-        "https://soict.hust.edu.vn/tu-van-giai-dap-tuyen-sinh.html",
-        "https://soict.hust.edu.vn/truong-he-2024-ve-tri-tue-nhan-tao-tao-sinh.html",
-        "https://soict.hust.edu.vn/truong-he-ve-y-hoc-chinh-xac-2024-precision-medicine-division-global-project.html",
-        "https://soict.hust.edu.vn/seminar-thang-8-2024-truong-cntttt.html",
-        "https://soict.hust.edu.vn/seminar-thang-9-2024-truong-cntttt.html",
-        "https://soict.hust.edu.vn/trao-chung-chi-ta-cho-sinh-vien-ho-tro-giang-day-ky-2-nam-hoc-2023-2024.html",
-        "https://soict.hust.edu.vn/cuoc-thi-olympic-tin-hoc-bkhn-2024.html",
-        "https://soict.hust.edu.vn/hoi-thao-quoc-te-ve-cong-nghe-thong-tin-va-truyen-thong-soict-2024.html"
-        ],
-        ["https://soict.hust.edu.vn/nguyen-tu-quang.html",
-        "https://soict.hust.edu.vn/vuong-quang-khai.html",
-        "https://soict.hust.edu.vn/hoang-viet-anh-chi-co-mot-tinh-yeu-duy-nhat.html",
-        "https://soict.hust.edu.vn/lu-thanh-long-thu-linh-cong-nghe.html",
-        "https://soict.hust.edu.vn/nguyen-ha-dong.html",
-        "https://soict.hust.edu.vn/tran-viet-hung.html"
-        ]
-        
-    ];
-
-    document.querySelectorAll('.slide-blocks' + index + ' img').forEach((img, ind) => {
-        const a = document.createElement('a');
-        a.href = links[index - 3][ind];
-        img.parentNode.insertBefore(a, img);
-        a.appendChild(img);
     });
 }
 
