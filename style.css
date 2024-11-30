@@ -2,6 +2,7 @@ header {
     display: flex;
     align-items: center;
     height: 10vw;
+    padding-bottom: 10px;
 }
 
 .logo {
@@ -72,6 +73,12 @@ header {
     padding-right: 5px;
 }
 
+.bar-container {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 #bar-container {
     display: flex;
     width: 100%;
@@ -81,7 +88,6 @@ header {
     background-color: rgb(65, 64, 64);
     color: white;
     font-size: 90%;
-    margin-top: 10px;
     height: 30px;
     line-height: 28px;
     padding-left: 1%;
@@ -99,10 +105,15 @@ header {
 .bar-content {
     display: none;
     position: absolute;
+    margin-left: -15px;
+    margin-top: 5px;
     background-color: rgb(65, 64, 64);
-    width: 25vw;
+    width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+.bar:nth-child(11) .bar-content {
+    margin-left: -145px;
 }
 
 .bar-content a {
@@ -217,6 +228,7 @@ header {
 .slides3, .slides4 {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    padding-bottom: 50px;
 }
 
 .slide-blocks3 img, .slide-blocks4 img {
@@ -233,10 +245,10 @@ header {
     font-size: 100%;
     width: 19.5vw; 
     margin-left: 6.5vw;
-    margin-top: -220px;
+    margin-top: -18vw;
 }
 
-.slide-blocks3 #date{
+.slide-blocks3 .date-text{
     position: absolute;
     width: 5vw;
     height: 3vw;
@@ -251,7 +263,11 @@ header {
     margin-top: -22vw;
 }
 
-.slide-blocks3 #time, .slide-blocks4 #quote {
+.slide-blocks3 .content-text, .slide-blocks4 .content-text {
+    font-weight: bolder;
+}
+
+.slide-blocks3 .time-text, .slide-blocks4 .quote-text {
     font-size: 15px;
     margin-top: 20px;
     padding-bottom: 50px;
@@ -311,7 +327,7 @@ header {
 }
 
 .enrolling-context img, .collabing-context img{
-    width: 22vw;
+    width: 300px;
     aspect-ratio: 16 / 14;
     padding: 10px 300px 10px 10px;
     background-color: #fff;
@@ -372,7 +388,7 @@ header {
 .slide-blocks4 p {
     width: 17vw;
     margin-left: 4.2vw;
-    margin-top: -220px;
+    margin-top: -16vw;
 }
 
 .slide-blocks4 #ex {
@@ -380,7 +396,7 @@ header {
     position: absolute;
     font-size: 13px;
     font-family: sans-serif;
-    margin-top: -275px;
+    margin-top: -20vw;
     margin-left: 3.2vw;
     text-align: center;
     padding: 6px 4px 4px 4px;
@@ -490,18 +506,18 @@ header {
 }
 
 #status p {
-    width: 200px;
+    width: 18vw;
     margin: 0px;
     padding-bottom: 20px;
 }
 
 #stat {
-    font-size: 22px;
+    font-size: 2vw;
 }
 
 #number {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 .video {
@@ -528,7 +544,7 @@ header {
 
 .vid p {
     position: absolute;
-    font-size: 18px;
+    font-size: 1.5vw;
     margin-top: 5px;
     color: rgb(0, 0, 0);
 }
